@@ -41,21 +41,8 @@ void tc_run(test_container tc){
             }
             else puts("we failed");
       }
-      printf("got %i\n", ret);
 }
 
 void tc_free(test_container* tc){
       free(tc->tests);
-}
-
-_Bool test_0(){
-      return 1+1 == 2;
-}
-
-int main(){
-      test_container tc = tc_setup();
-      tc_add_test(&tc, &test_0, "addition test");
-      tc_run(tc);
-      tc_free(&tc);
-      return 0;
 }
