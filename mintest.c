@@ -1,7 +1,7 @@
 /* mintest OR [a][s][h]unit
  *            ash saves hours
  */
-#include "ct.h"
+#include "mintest.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

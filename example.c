@@ -1,4 +1,4 @@
-#include "ct.h"
+#include "mintest.h"
 
 int add_nums(int x, int y){
       return x+y;

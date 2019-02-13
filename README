@@ -13,7 +13,7 @@ to clean up our test_container, tc_free(test_container* tc) is called
 ===============
 |usage example|
 ===============
-#include "ct.h"
+#include "mintest.h"
 
 int add_nums(int x, int y){
       return x+y;
