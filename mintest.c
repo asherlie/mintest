@@ -2,6 +2,7 @@
  *            ash saves hours
  */
 #include "mintest.h"
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -33,13 +34,21 @@ void tc_add_test(test_container* tc, _Bool (*tst)(void), char* label){
       strncpy(tc->tests[tc->n++].label, label, 49);
 }
 
+void pass_print(char* label){
+      printf("test: \"%s\" %sPASSED%s\n", label, ANSI_GRE, ANSI_NON);
+}
+
+void fail_print(char* label){
+      printf("test: \"%s\" %sFAILED%s\n", label, ANSI_RED, ANSI_NON);
+}
+
 void tc_run(test_container tc){
       _Bool ret = 0;
       for(int i = 0; i < tc.n; ++i){
             if((ret = tc.tests[i].function())){
-                  printf("passed test with label %s\n", tc.tests[i].label);
+                  pass_print(tc.tests[i].label);
             }
-            else puts("we failed");
+            else fail_print(tc.tests[i].label);
       }
 }
 

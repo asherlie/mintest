@@ -9,7 +9,7 @@ _Bool test_0(){
 }
 
 _Bool test_1(){
-      return add_nums(5, 9) == 14;
+      return add_nums(5, 9) == 1;
 }
 
 int main(){
