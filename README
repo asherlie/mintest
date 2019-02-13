@@ -1,0 +1,15 @@
+mintest is a minimalist c unit testing library
+
+
+to use mintest, a test_container must first be initialized to the value returned
+by tc_setup()
+
+tests can be added to a test_container by passing a pointer to a function with return type _Bool to the tc_add_test(test_container* tc, _Bool (*function)(void), char* label) function
+
+when tc_run(test_container tc) is called, all tests in the test_container will be run
+
+to clean up our test_container, tc_free(test_container* tc) is called
+
+===============
+|usage example|
+===============
