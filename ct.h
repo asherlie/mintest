@@ -4,11 +4,11 @@ struct test{
       char label[50];
 };
 
-struct test_container{
+typedef struct test_container{
       char label[50];
       int n, cap;
       struct test* tests;
-};
+}test_container;
 
 struct test_container tc_setup();
 //void tc_add_test(struct test_container* tc, void* tst, char* label);
